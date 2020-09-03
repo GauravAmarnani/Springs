@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Teacher {
     public static void main(String...args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("testbeans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("objectAsProperty.xml");
         Student gaurav = context.getBean("gaurav" , Student.class);
         gaurav.displayResult();
     }

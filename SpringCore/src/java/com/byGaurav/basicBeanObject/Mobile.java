@@ -8,7 +8,7 @@ public class Mobile
 {
     public static void main(String...args)
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext("simbeans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("basicBeanObject.xml");
         out.println("Config loaded.");
         Sim sim = (Sim)context.getBean("jio");
         sim.calling();

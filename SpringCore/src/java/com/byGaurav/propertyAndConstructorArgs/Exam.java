@@ -7,7 +7,7 @@ public class Exam
 {
     public static void main(String...args)
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext("studentbeans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("propertyAndConstructorArgs.xml");
 
         Student gaurav = context.getBean("gaurav" , Student.class);
         gaurav.displayStudentInfo();
