@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="heart" class="com.byGaurav.autowireProperty.Heart"/>
+    <bean id="brain" class="com.byGaurav.autowireProperty.Brain"/>
+
+    <!-- The following Bean Object will cause exception because we are using
+         byType autowiring in body2 Object.
+    <bean id="brain1" class="com.byGaurav.autowireProperty.Brain"/>-->
+
+    <bean id="body1" class="com.byGaurav.autowireProperty.Body1" autowire="byName"/>
+    <bean id="body2" class="com.byGaurav.autowireProperty.Body2" autowire="byType"/>
+    <bean id="body3" class="com.byGaurav.autowireProperty.Body3" autowire="constructor"/>
+
+</beans>
