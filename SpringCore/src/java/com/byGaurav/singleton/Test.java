@@ -1,4 +1,4 @@
-package com.byGaurav.springbootdemo4;
+package com.byGaurav.singleton;
 
 import static java.lang.System.out;
 import java.net.*;

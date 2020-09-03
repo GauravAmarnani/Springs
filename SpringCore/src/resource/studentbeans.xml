@@ -5,13 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="gaurav" class="com.byGaurav.sprintbootdemo2.Student">
+    <bean id="gaurav" class="com.byGaurav.propertyAndContructorArgs.Student">
         <constructor-arg name="studentName" value="Gaurav Amarnani"/>
         <constructor-arg name="id" value="1"/>
         <constructor-arg name="address" value="NewYork"/>
     </bean>
 
-    <bean id="vishnu" class="com.byGaurav.sprintbootdemo2.Student">
+    <bean id="vishnu" class="com.byGaurav.propertyAndContructorArgs.Student">
         <property name="studentName" value="Vishnu Bagde"/>
         <property name="id" value="5"/>
         <property name="address" value="Chembur"/>

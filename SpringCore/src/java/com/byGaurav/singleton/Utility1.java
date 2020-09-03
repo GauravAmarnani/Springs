@@ -1,6 +1,6 @@
-package com.byGaurav.springbootdemo4;
+package com.byGaurav.singleton;
 
-public class Utility2 {
+public class Utility1 {
 
     private SourceCode sourceCode;
 

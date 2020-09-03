@@ -1,4 +1,4 @@
-package com.byGaurav.springbootdemo1;
+package com.byGaurav.basicBeanObject;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

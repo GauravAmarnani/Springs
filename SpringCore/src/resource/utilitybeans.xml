@@ -5,13 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="sourceCodeObject" class="com.byGaurav.springbootdemo4.SourceCode" />
+    <bean id="sourceCodeObject" class="com.byGaurav.singleton.SourceCode" />
 
-    <bean id="utility1" class="com.byGaurav.springbootdemo4.Utility1">
+    <bean id="utility1" class="com.byGaurav.singleton.Utility1">
         <property name="sourceCode" ref="sourceCodeObject"/>
     </bean>
 
-    <bean id="utility2" class="com.byGaurav.springbootdemo4.Utility2">
+    <bean id="utility2" class="com.byGaurav.singleton.Utility2">
         <property name="sourceCode" ref="sourceCodeObject"/>
     </bean>
 

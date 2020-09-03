@@ -1,4 +1,4 @@
-package com.byGaurav.springbootdemo4;
+package com.byGaurav.singleton;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,4 +1,4 @@
-package com.byGaurav.springbootdemo1;
+package com.byGaurav.basicBeanObject;
 
 import static java.lang.System.out;
 

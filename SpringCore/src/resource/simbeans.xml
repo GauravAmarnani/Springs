@@ -5,8 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="airtel" class="com.byGaurav.springbootdemo1.Airtel"> </bean>
-    <bean id="vodaphone" class="com.byGaurav.springbootdemo1.Vodaphone"> </bean>
-    <bean id="jio" class="com.byGaurav.springbootdemo1.Jio"> </bean>
+    <bean id="airtel" class="com.byGaurav.basicBeanObject.Airtel"> </bean>
+    <bean id="vodaphone" class="com.byGaurav.basicBeanObject.Vodaphone"> </bean>
+    <bean id="jio" class="com.byGaurav.basicBeanObject.Jio"> </bean>
 
 </beans>

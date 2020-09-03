@@ -1,4 +1,4 @@
-package com.byGaurav.sprintbootdemo2;
+package com.byGaurav.propertyAndContructorArgs;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

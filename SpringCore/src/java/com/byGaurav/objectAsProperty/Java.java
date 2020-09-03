@@ -1,4 +1,4 @@
-package com.byGaurav.springbootdemo3;
+package com.byGaurav.objectAsProperty;
 
 import static java.lang.System.out;
 

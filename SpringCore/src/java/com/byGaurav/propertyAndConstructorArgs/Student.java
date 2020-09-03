@@ -1,4 +1,4 @@
-package com.byGaurav.sprintbootdemo2;
+package com.byGaurav.propertyAndContructorArgs;
 
 import static java.lang.System.out;
 

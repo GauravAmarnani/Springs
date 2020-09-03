@@ -1,4 +1,4 @@
-package com.byGaurav.springbootdemo3;
+package com.byGaurav.objectAsProperty;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
