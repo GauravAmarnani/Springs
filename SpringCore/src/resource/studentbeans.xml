@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="gaurav" class="com.byGaurav.sprintbootdemo2.Student">
+        <constructor-arg name="studentName" value="Gaurav Amarnani"/>
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="address" value="NewYork"/>
+    </bean>
+
+    <bean id="vishnu" class="com.byGaurav.sprintbootdemo2.Student">
+        <property name="studentName" value="Vishnu Bagde"/>
+        <property name="id" value="5"/>
+        <property name="address" value="Chembur"/>
+    </bean>
+
+</beans>
