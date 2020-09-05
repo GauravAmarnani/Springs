@@ -1,68 +1,18 @@
-Information about all the packages : 
-_________________________________________________________________________________________________________
-Spring Framework : # Creates Objects for us.
-		   # Manages Objects for us.
-_________________________________________________________________________________________________________
-Internal Functioning : 
-	
-	IOC Container				Config file 	   
-	1. A class.		Reads		1. Object a.
-	2. B class.		--------->	2. Object b.
-	3. C class.				3. Object c.
-_________________________________________________________________________________________________________
-* All the Objects that Spring creates and manages inside the IOC Container are called as Beans.
-_________________________________________________________________________________________________________
-* To get Objects (beans) --> getBean("Bean id name.");
-_________________________________________________________________________________________________________
-* 2 Types of IOC Containers : 
-	1. BeanFactory. 	|Both are 
-	2. ApplicationContext.	|Interfaces.
-_________________________________________________________________________________________________________
-* Note : BeanFactory is a bit outdated so we normally use ApplicationContext Interface.
-_________________________________________________________________________________________________________
-* Note : As both are Interfaces , for us to implement we have to use class 
-	 "ClassPathXmlApplicationContext" provided by Spring.
-_________________________________________________________________________________________________________
-* Config file (xml) : 
-	<bean id="airtel" class="com.byGaurav.basicBeanObject.Airtel"> </bean>
-	Note that by this line Default Constructor of the Class Airtel will be called.
-_________________________________________________________________________________________________________
-* This line will result in creation of a bean object "airtel" in the IOC Container.
-_________________________________________________________________________________________________________
-* To get this bean object airtel : 
-	ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-	Airtel airtel = context.getBean("airtel" , Airtel.class);
-_________________________________________________________________________________________________________
-* Note : spring-beans.xsd in xml helps in validating tags in xml.
-_________________________________________________________________________________________________________
-* Note : When ClassPathXmlApplicationContext("filename.xml") is called xml file reads and creates objects
-	 at that particular instance itself.
-_________________________________________________________________________________________________________
-
-1) basicBeanObject : 	Normally using <bean id="" class=""/> to create bean object of all the 
-			dependencies out main class has. 
-* We created the following 3 class bean objects : 
-1. Airtel.
-<bean id="airtel" class="com.byGaurav.basicBeanObject.Airtel"> </bean>
-
-2. Vodaphone.
-<bean id="vodaphone" class="com.byGaurav.basicBeanObject.Vodaphone"> </bean>
-
-3. Jio.
-<bean id="jio" class="com.byGaurav.basicBeanObject.Jio"> </bean>
-			
-We used the Interface Sim to hold these objects as they all implement Sim interface :
-Sim sim = (Sim)context.getBean("jio");
-_________________________________________________________________________________________________________
-2) propertyAndConstructorArgs :	Using <property name="" value=""> to create dependencies of that 
-				particular bean.
-* 
-_________________________________________________________________________________________________________
-3)
-_________________________________________________________________________________________________________
-4)
-_________________________________________________________________________________________________________
-5)
-_________________________________________________________________________________________________________
-6)
-_________________________________________________________________________________________________________
+This file holds information about the package (com.byGaurav.propertyAndConstructorArgs).
+__________________________________________________________________________________________________________
+This package contains 2 Java Classes and 1 Xml File.
+__________________________________________________________________________________________________________
+Java Classes include : Exam.java , Student.java. 
+__________________________________________________________________________________________________________
+Xml File include : propertyAndConstructorArgs.xml.
+__________________________________________________________________________________________________________
+Exam is the main class.
+__________________________________________________________________________________________________________
+The basic concept is that : 
+1) Student class object will be created in Exam class using bean of spring. 
+2) That Student class object will have its own different properties (3).
+3) There will be 2 Student objects. 
+4) Both of them will set their 3 properties (name , id , address) using spring.
+   First object using property feature.
+   Second object using constructor-args feature.
+__________________________________________________________________________________________________________
