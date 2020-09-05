@@ -1,20 +1,20 @@
 This file holds information about package (com.byGaurav.objectAsProperty).
-
+__________________________________________________________________________________________________________
 This package has 4 Java Classes and 1 Xml File.
-
+__________________________________________________________________________________________________________
 Java Classes include : Java.java , Math.java , Student.java , Teacher.java.
-
+__________________________________________________________________________________________________________
 Xml File include : objectAsProperty.xml.
-
+__________________________________________________________________________________________________________
 Teacher is the main class. 
-
+__________________________________________________________________________________________________________
 Here as the name of the package suggests , the bean has a dependency of another bean. 
-
+__________________________________________________________________________________________________________
 That is Student class have to create Java and Math class object and call their respective 
 methods using their objects. 
-
+__________________________________________________________________________________________________________
 For that we can create bean Object inside the property of a bean. 
-
+__________________________________________________________________________________________________________
 The code is as follows : 
 
 <bean id="gaurav" class="com.byGaurav.springbootdemo3.Student">
@@ -25,4 +25,5 @@ The code is as follows :
         <bean class="com.byGaurav.springbootdemo3.Java"/>
     </property>
 </bean>
+__________________________________________________________________________________________________________
 
