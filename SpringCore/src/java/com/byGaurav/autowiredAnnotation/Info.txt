@@ -1,68 +1,23 @@
-Information about all the packages : 
-_________________________________________________________________________________________________________
-Spring Framework : # Creates Objects for us.
-		   # Manages Objects for us.
-_________________________________________________________________________________________________________
-Internal Functioning : 
-	
-	IOC Container				Config file 	   
-	1. A class.		Reads		1. Object a.
-	2. B class.		--------->	2. Object b.
-	3. C class.				3. Object c.
-_________________________________________________________________________________________________________
-* All the Objects that Spring creates and manages inside the IOC Container are called as Beans.
-_________________________________________________________________________________________________________
-* To get Objects (beans) --> getBean("Bean id name.");
-_________________________________________________________________________________________________________
-* 2 Types of IOC Containers : 
-	1. BeanFactory. 	|Both are 
-	2. ApplicationContext.	|Interfaces.
-_________________________________________________________________________________________________________
-* Note : BeanFactory is a bit outdated so we normally use ApplicationContext Interface.
-_________________________________________________________________________________________________________
-* Note : As both are Interfaces , for us to implement we have to use class 
-	 "ClassPathXmlApplicationContext" provided by Spring.
-_________________________________________________________________________________________________________
-* Config file (xml) : 
-	<bean id="airtel" class="com.byGaurav.basicBeanObject.Airtel"> </bean>
-	Note that by this line Default Constructor of the Class Airtel will be called.
-_________________________________________________________________________________________________________
-* This line will result in creation of a bean object "airtel" in the IOC Container.
-_________________________________________________________________________________________________________
-* To get this bean object airtel : 
-	ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-	Airtel airtel = context.getBean("airtel" , Airtel.class);
-_________________________________________________________________________________________________________
-* Note : spring-beans.xsd in xml helps in validating tags in xml.
-_________________________________________________________________________________________________________
-* Note : When ClassPathXmlApplicationContext("filename.xml") is called xml file reads and creates objects
-	 at that particular instance itself.
-_________________________________________________________________________________________________________
-
-1) basicBeanObject : 	Normally using <bean id="" class=""/> to create bean object of all the 
-			dependencies out main class has. 
-* We created the following 3 class bean objects : 
-1. Airtel.
-<bean id="airtel" class="com.byGaurav.basicBeanObject.Airtel"> </bean>
-
-2. Vodaphone.
-<bean id="vodaphone" class="com.byGaurav.basicBeanObject.Vodaphone"> </bean>
-
-3. Jio.
-<bean id="jio" class="com.byGaurav.basicBeanObject.Jio"> </bean>
-			
-We used the Interface Sim to hold these objects as they all implement Sim interface :
-Sim sim = (Sim)context.getBean("jio");
-_________________________________________________________________________________________________________
-2) propertyAndConstructorArgs :	Using <property name="" value=""> to create dependencies of that 
-				particular bean.
-* 
-_________________________________________________________________________________________________________
-3)
-_________________________________________________________________________________________________________
-4)
-_________________________________________________________________________________________________________
-5)
-_________________________________________________________________________________________________________
-6)
-_________________________________________________________________________________________________________
+This file contains all the info about the package (com.byGaurav.autowiredAnnotation).
+__________________________________________________________________________________________________________
+This file contains 5 Java Classes : Code , Developer 1 , Developer 2 , Developer 3 , Manager.
+__________________________________________________________________________________________________________
+Manager is the main method. 
+__________________________________________________________________________________________________________
+This file basically uses the @autowired annotation above the method which is to be called 
+automatically. 
+__________________________________________________________________________________________________________
+We can call by either : 
+1) byType.          --> Developer 2. 
+2) byConstructors.  --> Developer 3.
+3) byName.          --> Developer 1.
+__________________________________________________________________________________________________________
+Developer 2 directly goes for byType search and can fail if it found more than 1 bean of same 
+class.
+__________________________________________________________________________________________________________
+Developer 1 will go and search for the name of bean object provided using @qualifier. It will 
+fail if there are more than two bean objects with same id.
+__________________________________________________________________________________________________________
+Developer 3 will go and search for the byType way first and then go and search using byName 
+way.
+__________________________________________________________________________________________________________
