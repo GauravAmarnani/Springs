@@ -1,0 +1,25 @@
+This file contains all the information about the package (com.byGaurav.propertyFromXml).
+
+This package contains 2 Java Classes : Company , Fresher.
+
+Company is the main class.
+
+Basically this package uses the property file from the bean file linked to the java class.
+
+The code for linking property file is :
+<context:property-placeholder location="filename.properties"/>
+
+The code to write to get values from property files is as follows :
+<bean id="fresher" class="com.byGaurav.propertyFromXml.Fresher">
+    <property name="name" value="${fresher.name}"/>
+    <property name="score" value="${fresher.score}"/>
+    <property name="strength" value="${fresher.strength}"/>
+</bean>
+
+The code to write inside the property file is :
+fresher.name = "Gaurav"
+fresher.score = 95
+fresher.strength = "Core Java , Advanced Java , Springs , Cassandra , Jenkins , Git."
+
+Note : The type of java object you are passing matters.
+Eg : You can't pass a String value instead of an int or Integer type.
