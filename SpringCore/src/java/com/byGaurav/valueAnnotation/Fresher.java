@@ -1,20 +1,31 @@
 package com.byGaurav.valueAnnotation;
 
+import jdk.jfr.Frequency;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
+
+import javax.annotation.Resource;
+
 import static java.lang.System.out;
 
 public class Fresher {
 
     private Fresher() {}
 
-    @Value("${fresher.name}")
     private String name;
+
+    @Value("${fresher.name}")
+    @Required
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Value("${fresher.score}")
     private int score;
 
     @Value("${fresher.strength}")
     private String strength;
+
 
     public void displayInfo() {
         out.println("Fresher Info : " + "\nName : " + name + "\nScore : " + score + "\nStrength : " + strength);
