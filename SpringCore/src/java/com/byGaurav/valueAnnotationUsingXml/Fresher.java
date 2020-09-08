@@ -1,10 +1,7 @@
-package com.byGaurav.valueAnnotation;
+package com.byGaurav.valueAnnotationUsingXml;
 
-import jdk.jfr.Frequency;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
-
-import javax.annotation.Resource;
 
 import static java.lang.System.out;
 
