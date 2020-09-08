@@ -1,13 +1,13 @@
-package com.byGaurav.objectAsProperty;
+package com.byGaurav.beanAsPropertyUsingXml;
 
 import static java.lang.System.out;
 
-public class Math {
+public class Java {
 
-    public int mathExam() {
-        int result = 70; // Actual Result.
+    public int javaExam() {
+        int result = 80; // Actual Result.
         result = cheatTest(); // Called internally by Gaurav to cheat without Teacher's knowledge.
-        out.println("Successful Math Exam.");
+        out.println("Successful Java Exam.");
         return result;
     }
 

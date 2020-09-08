@@ -1,4 +1,4 @@
-package com.byGaurav.objectAsProperty;
+package com.byGaurav.beanAsPropertyUsingXml;
 
 import static java.lang.System.out;
 
