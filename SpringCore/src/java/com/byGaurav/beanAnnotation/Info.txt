@@ -1,0 +1,23 @@
+This file holds all the information about the package (com.byGaurav.beanAnnotation).
+_________________________________________________________________________________________________________
+There are 3 Java classes in this file : Main , Config , Test.
+_________________________________________________________________________________________________________
+Main.java is the main class.
+_________________________________________________________________________________________________________
+Basically in this package , we create a IOC Container using -
+AnnotationConfigApplicationContext object and pass Config class in the argument. Then we 
+Initialize Test class Object using the annotation @Bean instead of @Component and 
+@ComponentScan. 
+_________________________________________________________________________________________________________
+We just have to create a method which returns Test class Object and manually create a 
+Test class Object and return it. 
+_________________________________________________________________________________________________________
+The code is as follows : 
+
+    @Bean
+    public Test testBean() {
+        return new Test();
+    }
+    
+Note : Here the name is the method is considered as the Bean ID.
+_________________________________________________________________________________________________________ 
