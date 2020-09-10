@@ -1,0 +1,42 @@
+This file holds all the info about package (com.byGaurav.beanAsPropertyUsingJavaConfig).
+_________________________________________________________________________________________________________
+There are 5 Java Classes and 1 Java Interface in this package.
+_________________________________________________________________________________________________________
+Java Classes are : Client , College , JavaConfig , MathTeacher , Principal.
+_________________________________________________________________________________________________________
+Java Interface is : Teacher.
+_________________________________________________________________________________________________________
+Basically this package shows how we can create a dependency of an Object for an Object
+using the @Bean annotation. For a simpler version , check out (com/byGaurav/
+beanAsPropertyUsingXml) package.
+_________________________________________________________________________________________________________
+Also in this package we create Object dependency for an Object using two different ways :
+1. Setter :
+public void setPrincipal(Principal principal) {
+    this.principal = principal;
+}
+2. Constructor :
+public College(Teacher teacher) {
+    this.teacher = teacher;
+}
+_________________________________________________________________________________________________________
+This leads to the following Config file :
+    @Bean
+    public Teacher mathTeacherBean() {
+        Teacher teacher = new MathTeacher();
+        return teacher;
+    }
+
+    @Bean
+    public Principal principalBean() {
+        Principal principal = new Principal();
+        return principal;
+    }
+
+    @Bean
+    public College collegeBean() {
+        College college = new College(mathTeacherBean());
+        college.setPrincipal(principalBean());
+        return college;
+    }
+_________________________________________________________________________________________________________
