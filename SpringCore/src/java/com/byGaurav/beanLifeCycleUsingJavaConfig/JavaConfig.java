@@ -1,4 +1,4 @@
-package com.byGaurav.beanLifeCycle;
+package com.byGaurav.beanLifeCycleUsingJavaConfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
