@@ -1,0 +1,13 @@
+This file contains all the info about the package (com.byGaurav.beanLifeCycleUsingJavaConfig).
+
+It contains 3 Java Classes : Main , Utility , JavaConfig.
+
+Main java class here is : Main.
+
+The following are the order of Bean Object from creation till destruction :
+1) IOC Container gets created due to the JavaConfig file or xml file. (JavaConfig.class).
+2) Dependency for the object is created. (Setter methods).
+3) Init method will be called. (@PostConstruct).
+4) Object will be created. (@Bean).
+5) Destroy method will be called. (@PreDestroy).
+6) Object will be destroyed. (close() / registerShutdownHook()).
