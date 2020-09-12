@@ -1,0 +1,19 @@
+This file holds all in the info about package (com.byGaurav.beanAsPropertyUsingXml).
+
+This package contains 4 Java Classes : Teacher , Student , Java , Maths.
+
+The main class being : Teacher.
+
+In this package we basically create a bean Object as property of another Bean object.
+
+We do this using xml file.
+
+The code for that is :
+    <bean id="gaurav" class="com.byGaurav.beanAsPropertyUsingXml.Student">
+        <property name="mathTest">
+            <bean class="com.byGaurav.beanAsPropertyUsingXml.Math"/>
+        </property>
+        <property name="javaTest">
+            <bean class="com.byGaurav.beanAsPropertyUsingXml.Java"/>
+        </property>
+    </bean>
